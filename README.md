@@ -3,7 +3,7 @@
   2. External API Service - Express Server
   3. Internal API Service - Express Graphql Server
   
-![ManoSriram - fury-coder]()
+![Shahi Kant - fury-coder](https://github.com/shashi2290/)
 
 
 ![Shashi Kant - Flow Chart](https://i.ibb.co/55X2vdL/neblar-backend-drawio.png)
