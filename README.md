@@ -1,9 +1,15 @@
 ### Services:
-  1. Auth Service
+  1. Auth Service -JWT
   2. External API Service - Express Server
   3. Internal API Service - Express Graphql Server
-  
+
 ![Shahi Kant - fury-coder](https://github.com/shashi2290/)
+### Frameworks
+  1. NodeJS - API server
+  2. Graphql - Graph end points for internal-service
+  3. RabbitMQ - AMQP server - Microservice communications
+  4. JWT - Authentication
+  5. Docker - Running RabbitMQ server locally
 
 
 ![Shashi Kant - Flow Chart](https://i.ibb.co/55X2vdL/neblar-backend-drawio.png)
