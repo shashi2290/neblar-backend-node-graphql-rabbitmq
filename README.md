@@ -12,10 +12,10 @@
   1. Clone the repository
 
   2. Install dependencies with npm install
-    a. in the root folder
-    b. cd auth-service && npm install
-    b. cd external-api-service && npm install
-    c. cd internal-service-graphql && npm install
+    - a. in the root folder
+    - b. cd auth-service && npm install
+    - c. cd external-api-service && npm install
+    - d. cd internal-service-graphql && npm install
 
   3. Update the .env files with correct MONGO_URI to allow server to connect to Mongo db
 
@@ -33,7 +33,7 @@
       - payload { email, password }
 
   8. Run Rabbit mq server using docker service
-     docker run -d --hostname my-rabbit --name some-rabbit rabbitmq
+      - docker run -d --hostname my-rabbit --name some-rabbit rabbitmq
 
   9. Start both Internal(port:5000) and External Service
      cd into the folder and npm start - in both the services
@@ -43,7 +43,7 @@
     - http://localhost:5000/graphql - wont work as it will not be able to autheticate the api 
     - graphql sample query and mutations via graphql variables
     
-    - ### NOTE**** - if you wish to use http://localhost:5000/graphql then, remove isAuthenticated middleware from /internal-service-graphql/index.js (see - line 47)
+  **NOTE** - if you wish to use http://localhost:5000/graphql then, remove isAuthenticated middleware from /internal-service-graphql/index.js (see - line 47)
 
     # mutation {
     #   addPrescription(patient_nhi: "xyz", patient_name: "test4", date: "24 Aug", medication_id: "1234", medication_dosage: "3 times a day") {
