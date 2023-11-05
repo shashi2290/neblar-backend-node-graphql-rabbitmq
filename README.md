@@ -12,10 +12,10 @@
   1. Clone the repository
 
   2. Install dependencies with npm install
-    - a. in the root folder
-    - b. cd auth-service && npm install
-    - c. cd external-api-service && npm install
-    - d. cd internal-service-graphql && npm install
+      - a. in the root folder
+      - b. cd auth-service && npm install
+      - c. cd external-api-service && npm install
+      - d. cd internal-service-graphql && npm install
 
   3. Update the .env files with correct MONGO_URI to allow server to connect to Mongo db
 
