@@ -33,7 +33,8 @@ app.use((req, res, next) => {
   //     return;
   // }
 
-  if(req.headers['x-api-key'] !== process.env.API_KEY) {
+  if(req.headers.host !== "localhost:5000" && req.headers['x-api-key'] !== process.env.API_KEY) {
+    console.log(req.headers)
     // console.log('req.headers', req.headers);
     res.status(403).send('Request is not authenticated');
     return;

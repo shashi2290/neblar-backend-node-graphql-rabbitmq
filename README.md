@@ -14,6 +14,8 @@
 ### Architectural Flowchart
 ![Shashi Kant - Flow Chart](https://i.ibb.co/55X2vdL/neblar-backend-drawio.png)
 
+### Run on Github Codespaces for better experience
+
 ### Steps:
   1. Clone the repository
 
@@ -40,6 +42,7 @@
 
   8. Run Rabbit mq server using docker service
       - docker run -d --hostname my-rabbit --name some-rabbit rabbitmq
+      - or, docker run -p 5672:5672 rabbitmq
 
   9. Start both Internal(port:5000) and External Service
      cd into the folder and npm start - in both the services

@@ -33,12 +33,12 @@ const PrescriptionType = new GraphQLObjectType({
 var channel, connection;
 
 async function connectRabbitMq() {
-  const amqpServer = "amqp://localhost:5672";
+  const amqpServer = "amqp://localhost:5672/";
   connection = await amqp.connect(amqpServer);
   channel = await connection.createChannel();
   await channel.assertQueue("INTERNAL");
 };
-connectRabbitMq();
+(async () => await connectRabbitMq())();
 
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
