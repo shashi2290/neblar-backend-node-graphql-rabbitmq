@@ -48,14 +48,14 @@ const RootQuery = new GraphQLObjectType({
       args: { nhi: { type: GraphQLString } },
       resolve: async (parent, args) => {
         let prescription = await Prescription.findOne({ "patient.nhi": args.nhi });
-        console.log("prescription", prescription);
+        // console.log("prescription", prescription);
         if(!prescription) {
           // get from external api
           channel.sendToQueue("EXTERNAL", Buffer.from(JSON.stringify({ "actionType": "query", "data": args })));
           await new Promise((resolve, reject) => {
             channel.consume("INTERNAL", (data) => {
               let content = JSON.parse(data.content);
-              console.log(`${content.message}`, content.data);
+              // console.log(`${content.message}`, content.data);
               // if (content.actionType === "query" && content.data.patient.nhi === args.nhi) { 
                 channel.ack(data);
                 prescription = content.data;
@@ -74,7 +74,7 @@ const RootQuery = new GraphQLObjectType({
 const mutation = new GraphQLObjectType({
   name: 'Mutation',
   fields: {
-    // Add a client
+    // Add a prescription
     addPrescription: {
       type: PrescriptionType,
       args: {
@@ -107,7 +107,7 @@ const mutation = new GraphQLObjectType({
     editPrescription: {
       type: PrescriptionType,
       args: {
-        nhi: { type: GraphQLNonNull(GraphQLID) },
+        nhi: { type: GraphQLString },
         patient_name: { type: GraphQLString },
         medication_id: { type: GraphQLString },
         medication_dosage: { type: GraphQLString }

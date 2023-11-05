@@ -28,7 +28,7 @@ async function connectRabbitMq() {
 connectRabbitMq().then(() => {
   channel.consume("EXTERNAL", (msg) => {
     const message = JSON.parse(msg.content);
-    console.log("message", message)
+    // console.log("message", message)
     // // const { actionType, data } = message;
     sync(message).then(data => {
       console.log(data.message)

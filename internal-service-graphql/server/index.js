@@ -34,6 +34,7 @@ app.use((req, res, next) => {
   // }
 
   if(req.headers['x-api-key'] !== process.env.API_KEY) {
+    // console.log('req.headers', req.headers);
     res.status(403).send('Request is not authenticated');
     return;
   }
@@ -44,7 +45,7 @@ app.use((req, res, next) => {
 // connect to db
 connectDb();
 
-app.use('/graphql',isAuthenticated , graphqlHTTP({
+app.use('/graphql' , graphqlHTTP({
   schema,
   graphiql: process.env.NODE_ENV === 'development',
 }))
