@@ -11,7 +11,7 @@
   4. JWT - Authentication
   5. Docker - Running RabbitMQ server locally
 
-
+### Architectural Flowchart
 ![Shashi Kant - Flow Chart](https://i.ibb.co/55X2vdL/neblar-backend-drawio.png)
 
 ### Steps:
