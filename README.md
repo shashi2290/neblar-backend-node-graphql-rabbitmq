@@ -84,4 +84,11 @@
 
   11. watch the sync update in the external db
 
+  ### API Testing
+    In the root folder in terminal, run "npm run test"
+    - Note: The test in schema.test.js are for api testing, so an instance of the internal-service should be running to test the APIs
+
+  ### Unit Tests
+    Not Implement - Write separate test for each functions and test those functions
+
 
